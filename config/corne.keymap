@@ -9,15 +9,18 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-
+#define DEFAULT 0
+#define LOWER 1
+#define RAISE 2
+#define ADJUST 3
 
 / {
         
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <LOWER RAISE>;
+            then-layer = <ADJUST>;
         };
     };
 
@@ -27,6 +30,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        label = "DEFAULT";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -40,6 +44,7 @@
                         >;
                 };
                 lower_layer {
+                        label = "LOWER";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -54,6 +59,7 @@
                 };
 
                 raise_layer {
+                        label = "RAISE";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -70,6 +76,7 @@
 
 
                 adjust_layer {
+                        label = "ADJUST";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
