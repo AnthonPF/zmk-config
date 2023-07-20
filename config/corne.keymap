@@ -19,6 +19,26 @@
 #define _____ &trans
 
 / {
+    macros {
+        barra_vertical: barra_vertical {
+            label = "barra_vertical";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N4>
+            , <&macro_release &kp LALT>
+            ;
+            
+        };
+    };
+};
+
+
+
+/ {
         
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -57,7 +77,7 @@
                         bindings = <
    &kp GRAVE  &kp EXCL &kp ES_AT &kp ES_HASH &kp DLLR &kp PRCNT               &kp ES_AMPR &kp ES_SLSH  &kp ES_LPRN &kp ES_RPRN  &kp ES_EQL &kp MINUS
    &kp LCTRL &none   &none &kp UP   &none   &none                  &kp AT &kp ES_LBRC &kp ES_RBRC  &none &kp LBKT &kp RBKT
-   &kp LSHFT &kp PIPE  &kp LEFT &kp DOWN   &kp RIGHT   &none            &kp ES_SCLN &kp ES_LCBR  &kp ES_RCBR &none &kp ES_UNDS &kp RBRC
+   &kp LSHFT &barra_vertical  &kp LEFT &kp DOWN   &kp RIGHT   &none            &kp ES_SCLN &kp ES_LCBR  &kp ES_RCBR &none &kp ES_UNDS &kp RBRC
                              &none &trans   &kp RET                  &kp SPACE   &trans  &kp RALT
                         >;
                 };
