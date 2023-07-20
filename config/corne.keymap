@@ -98,12 +98,12 @@
                 adjust_layer {
                         label = "ADJ";
 // -----------------------------------------------------------------------------------------
-// |        |      |      |      |      |      |  |     |     |    |    |    | VOL UP |
+// |   NUM LOCK     |      |      |      |      |      |  |     |     |    |    |    | VOL UP |
 // | BT CLR | BT 1 | BT 2 | BT 3 | BT 4 | BT 5 |  |     |     |    |    |    | VOL DN |
 // |        |      |      |      |      |      |  |     |     |    |    |    |  MUTE  |
 //                        |      |      |      |  |     |     |    |
                         bindings = <
-   &none &none &none &none &none &none                                                  &none &none  &none &none &none &kp C_VOL_UP
+   &kp KP_NUMLOCK &none &none &none &none &none                                                  &none &none  &none &none &none &kp C_VOL_UP
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &none &none &none &none &none &kp C_VOL_DN
    &none &none   &none &none   &none   &none                                            &none &none  &none &none &none &kp C_MUTE
                                                 &none &trans   &none                    &none &trans &none
