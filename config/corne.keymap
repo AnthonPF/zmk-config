@@ -56,9 +56,9 @@
                 default_layer {
                         label = "DEF";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP   |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ñ  |  TILDE |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | RSHIFT |
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '  |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RSHIFT |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
@@ -70,29 +70,29 @@
                 lower_layer {
                         label = "LOW";
 // -----------------------------------------------------------------------------------------
-// |  º |  !  |  @  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  | ?  |
-// | CTRL |     |   | UP  |     |     |       |  "  |  ·  |    |    |  `  |  +   |
-// | SHFT |  | | LEFT | DOWN | RIGHT  |     |  |  ;  |  +  |    |    | _ |  ç   |
-//                    |    |     | SPC |   | ENT |     | ALT |
+// |  1   |  2  |  3  |  4  |  5 |  6  |       |  7  |  8 |  9  |  0  |  -  | =  |
+// | CTRL |     |     | UP  |    |     |       |  [  |  ]  |    |    |    |      |
+// | SHFT |  `  | LEFT| DOWN| RIGHT |  |       |  \  |  +  |    |    |    | RSHIFT |
+//                    |   |   | SPC    |       | ENT  |     |  ALT |
                         bindings = <
-   &kp GRAVE  &kp EXCL &kp ES_AT &kp ES_HASH &kp DLLR &kp PRCNT               &kp ES_AMPR &kp ES_SLSH  &kp ES_LPRN &kp ES_RPRN  &kp ES_EQL &kp MINUS
-   &kp LCTRL &none   &none &kp UP   &none   &none                  &kp AT &kp ES_LBRC &kp ES_RBRC  &none &kp LBKT &kp RBKT
-   &kp LSHFT &barra_vertical  &kp LEFT &kp DOWN   &kp RIGHT   &none            &kp ES_SCLN &kp ES_LCBR  &kp ES_RCBR &none &kp ES_UNDS &kp RBRC
+   &kp N1  &kp N2 &kp N3 &kp N4 &kp N5 &kp N6                          &kp N7 &kp N8  &kp N9 &kp N0  &kp MINUS &kp EQUAL
+   &kp LCTRL &none   &none &kp UP   &none   &none                      &kp LBKT &kp RBKT &none &none &none &none
+   &kp LSHFT &kp GRAVE  &kp LEFT &kp DOWN   &kp RIGHT   &none    &kp BSLH &kp PLUS  &none &none &none &kp RSHIFT
                              &none &trans   &kp RET                  &kp SPACE   &trans  &kp RALT
                         >;
                 };
                 raise_layer {
                         label = "RAI";
 // -----------------------------------------------------------------------------------------
-// |  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC  |
-// | F1 | F2    | F3  | F4  | F5  | F6  |   | F7  | F8  |  F9 | F10 |  F11  | F12 |
-// | LSHFT/CAPS | <> |     |     |     |  |   | DEL |     |     |     |     |  RSHFT |
+// | F1  |  F2  |  F3  |  F4  |  F5 | F6  |        |   F7  |  F8  |  F9  | F10  | F11  | F12 |
+// |     |     |      |      |      |     |        |      |      |     |      |      |
+// |CAPS |     |      |      |      |     |        | DEL  |      |      |     |      | RSHFT|
 //                    | ESC  |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans    &kp N1       &kp N2       &kp N3       &kp N4                     &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &kp F1 &kp F2  &kp F3 &kp F4 &kp F5 &kp F6                                   &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-   &mt LSHFT CAPS &kp ES_LABK      &none       &none       &none                &none         &kp DEL  &none   &none &none    &none &kp RSHFT
-                        &kp ESC     &trans       &kp RET                       &kp SPACE  &trans   &kp RALT
+   &kp F1 &kp F2  &kp F3 &kp F4  &kp F5        &kp F6 &kp F7 &kp F8  &kp F9 &kp F10  &kp F11 &kp F12
+   &none &none  &none &none &none &none        &none &none &none &none &none &none
+   &kp CAPS &none &none &none &none &none      &kp DEL  &none  &none &none  &none &kp RSHFT
+                &kp ESC  &trans  &kp RET       &kp SPACE  &trans  &kp RALT
                         >;
                 };
                 adjust_layer {
@@ -103,10 +103,10 @@
 // |        |      |      |      |      |      |  |     |     |    |    |    |  MUTE  |
 //                        |      |      |      |  |     |     |    |
                         bindings = <
-   &kp KP_NUMLOCK &none &none &none &none &none                                                  &none &none  &none &none &none &kp C_VOL_UP
+   &kp KP_NUMLOCK &none &none &none &none &none                                         &none &none  &none &none &none &kp C_VOL_UP
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &none &none &none &none &none &kp C_VOL_DN
    &none &none   &none &none   &none   &none                                            &none &none  &none &none &none &kp C_MUTE
-                                                &none &trans   &none                    &none &trans &none
+                            &none &trans   &none                                        &none &trans &none
                         >;
                 };
                 
