@@ -70,12 +70,12 @@
                 lower_layer {
                         label = "LOW";
 // -----------------------------------------------------------------------------------------
-// |  1   |  2  |  3  |  4  |  5 |  6  |       |  7  |  8 |  9  |  0  |  -  | =  |
+// |  !   |  @  |  #  |  $  |  % |  ^  |       |  &  |  * |  (  |  )  |  -  | =  |
 // | CTRL |     |     | UP  |    |     |       |  [  |  ]  |    |    |    |      |
 // | SHFT |  `  | LEFT| DOWN| RIGHT |  |       |  \  |  +  |    |    |    | RSHIFT |
 //                    |   |   | SPC    |       | ENT  |     |  ALT |
                         bindings = <
-   &kp N1  &kp N2 &kp N3 &kp N4 &kp N5 &kp N6                          &kp N7 &kp N8  &kp N9 &kp N0  &kp MINUS &kp EQUAL
+   &kp EXCL  &kp AT &kp POUND &kp DLLR &kp PRCNT &kp CARET      &kp AMPS &kp STAR  &kp LPAR &kp RPAR  &kp MINUS &kp EQUAL
    &kp LCTRL &none   &none &kp UP   &none   &none                      &kp LBKT &kp RBKT &none &none &none &none
    &kp LSHFT &kp GRAVE  &kp LEFT &kp DOWN   &kp RIGHT   &none    &kp BSLH &kp PLUS  &none &none &none &kp RSHIFT
                              &none &trans   &kp RET                  &kp SPACE   &trans  &kp RALT
@@ -84,13 +84,13 @@
                 raise_layer {
                         label = "RAI";
 // -----------------------------------------------------------------------------------------
-// | F1  |  F2  |  F3  |  F4  |  F5 | F6  |        |   F7  |  F8  |  F9  | F10  | F11  | F12 |
-// |     |     |      |      |      |     |        |      |      |     |      |      |
+// | 1     |  2     |  3     |  4     |  5     | 6    |        |   7  |  8  |  9  |   0    |     |  BKSP  |
+// |  F1   |  F2   |   F3   |  F4    |  F5    |   F6  |        |  F7    |  F8    |  F9   |  F10    |   F11   |  F12 |
 // |CAPS |     |      |      |      |     |        | DEL  |      |      |     |      | RSHFT|
 //                    | ESC  |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp F1 &kp F2  &kp F3 &kp F4  &kp F5        &kp F6 &kp F7 &kp F8  &kp F9 &kp F10  &kp F11 &kp F12
-   &none &none  &none &none &none &none        &none &none &none &none &none &none
+   &kp N1 &kp N2  &kp N3 &kp N4  &kp N5 &kp N6       &kp N7 &kp N8  &kp N9 &kp N0  &none &kp BSPC
+   &kp F1 &kp F2  &kp F3 &kp F4 &kp F5 &kp F6        &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
    &kp CAPS &none &none &none &none &none      &kp DEL  &none  &none &none  &none &kp RSHFT
                 &kp ESC  &trans  &kp RET       &kp SPACE  &trans  &kp RALT
                         >;
@@ -98,7 +98,7 @@
                 adjust_layer {
                         label = "ADJ";
 // -----------------------------------------------------------------------------------------
-// |   NUM LOCK     |      |      |      |      |      |  |     |     |    |    |    | VOL UP |
+// |   NUM LOCK    |      |      |      |      |      |  |     |     |    |    |    | VOL UP |
 // | BT CLR | BT 1 | BT 2 | BT 3 | BT 4 | BT 5 |  |     |     |    |    |    | VOL DN |
 // |        |      |      |      |      |      |  |     |     |    |    |    |  MUTE  |
 //                        |      |      |      |  |     |     |    |
