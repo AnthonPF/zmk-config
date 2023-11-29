@@ -76,8 +76,8 @@
 //                    |   |   | SPC    |       | ENT  |     |  ALT |
                         bindings = <
    &kp EXCL  &kp AT &kp POUND &kp DLLR &kp PRCNT &kp CARET      &kp AMPS &kp STAR  &kp LPAR &kp RPAR  &kp MINUS &kp EQUAL
-   &kp LCTRL &none   &none &kp UP   &none   &none                      &kp LBKT &kp RBKT &none &none &none &none
-   &kp LSHFT &kp GRAVE  &kp LEFT &kp DOWN   &kp RIGHT   &none    &kp BSLH &kp PLUS  &none &none &none &kp RSHIFT
+   &kp LCTRL &none   &none &kp UP   &none   &none                      &kp LBKT &kp RBKT &none &none &none &kp BSLH
+   &kp LSHFT &kp GRAVE  &kp LEFT &kp DOWN   &kp RIGHT   &none    &kp PLUS &none  &none &none &none &kp RSHIFT
                              &none &trans   &kp RET                  &kp SPACE   &trans  &kp RALT
                         >;
                 };
